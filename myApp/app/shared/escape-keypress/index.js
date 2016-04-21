@@ -1,3 +1,8 @@
+/* escapeKeypress can be injected on any element, and the function associated with the 'escape-keypress' attribute
+ * will be called when the escape key is pressed.
+ */
+
+
 'use strict';
 
 const angular = require('angular');

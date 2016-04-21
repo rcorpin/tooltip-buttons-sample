@@ -13,6 +13,10 @@ module.exports = () => ({
     angular.extend(scope.tooltip, {
       open() {
         this.isOpen = true;
+
+        /* call the onOpen method on HomeCtrl where both buttons are being managed,
+         * so that it can trigger the other button to close when this one opens
+         */
         scope.onOpen({
           id: this.id
         });
@@ -21,6 +25,7 @@ module.exports = () => ({
         this.isOpen = false;
       }
     });
+
 
     /* Default Attribute Values */
 

@@ -1,8 +1,12 @@
 <div class="tooltip-button-container" escape-keypress="tooltip.close()">
+
+    <!-- TOOLTIP -->
     <span class="tooltip" uib-tooltip="{{ tooltip.text || 'I\'m a tooltip' }}" tooltip-is-open="tooltip.isOpen" tooltip-placement="top">
     </span>
 
+    <!-- BUTTON -->
     <button class="btn button" ng-click="tooltip.open()" tw-click-outside="tooltip.close()">
       {{ buttonText }}
     </button>
+
 </div>

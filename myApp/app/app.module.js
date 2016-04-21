@@ -22,7 +22,12 @@ angular
     'tooltipButton'
   ])
   .config(['$routeProvider', $routeProvider => {
-    $routeProvider.otherwise({
-      redirectTo: '/home'
-    });
+    $routeProvider
+      .when('/home', {
+        templateUrl: 'app/components/home/home.view.html',
+        controller: 'HomeCtrl'
+      })
+      .otherwise({
+        redirectTo: '/home'
+      });
   }]);
