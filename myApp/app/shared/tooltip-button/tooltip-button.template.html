@@ -5,7 +5,7 @@
     </span>
 
     <!-- BUTTON -->
-    <button class="btn button" ng-click="tooltip.open()" tw-click-outside="tooltip.close()">
+    <button class="btn button" ng-class="{'btn-primary' : tooltip.isOpen}" ng-click="tooltip.open()" tw-click-outside="tooltip.close()">
       {{ buttonText }}
     </button>
 
