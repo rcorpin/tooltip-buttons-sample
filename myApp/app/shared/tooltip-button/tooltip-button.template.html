@@ -6,7 +6,7 @@
 
     <!-- BUTTON -->
     <button class="btn button" ng-class="{'btn-primary' : tooltip.isOpen}" ng-click="tooltip.open()" tw-click-outside="tooltip.close()">
-      {{ buttonText }}
+      {{ buttonText || 'Toggle tooltip' }}
     </button>
 
 </div>
