@@ -1,14 +1,17 @@
 const angular = require('angular');
 
-module.exports = () => ({
-  restrict: 'E',
-  templateUrl: 'app/shared/tooltip-button/tooltip-button.template.html',
-  replace: true,
-  scope: {
-    buttonText: '=?',
-    tooltip: '=',
-    onOpen: '&?'
-  },
+class TooltipButtonDirective {
+  constructor() {
+    this.template = require('./tooltip-button.template.html');
+    this.restrict = 'E';
+    this.replace = true;
+    this.scope = {
+      buttonText: '=?',
+      tooltip: '=',
+      onOpen: '&?'
+    };
+  }
+
   link(scope, element, attrs) {
     angular.extend(scope.tooltip, {
       open() {
@@ -37,4 +40,6 @@ module.exports = () => ({
       scope.onOpen = angular.noop;
     }
   }
-});
+}
+
+module.exports = TooltipButtonDirective;

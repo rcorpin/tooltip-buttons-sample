@@ -4,6 +4,9 @@ module.exports = function(grunt) {
       lib: {},
       options: {
         transform: [
+          ['stringify', {
+            extensions: ['.html']
+          }],
           ['babelify', {
             ignore: /(?:node_modules|assets)\//
           }]
